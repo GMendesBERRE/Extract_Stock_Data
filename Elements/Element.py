@@ -1,4 +1,4 @@
-from .locator import Locator
+from Elements.Locator import Locator
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -11,7 +11,7 @@ class Element(object):
         self.find()
 
     def find(self):
-        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator=self.locator))
+        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(locator=self.locator))
         self.web_element = element
         return None
 

@@ -1,3 +1,4 @@
+from Elements.Element import Element
 
 class InputElement(Element):
 

@@ -11,7 +11,7 @@ class Element(object):
         self.find()
 
     def find(self):
-        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(locator=self.locator))
+        element = WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(locator=self.locator))
         self.web_element = element
         return None
 
@@ -19,4 +19,7 @@ class Element(object):
     def text(self):
         text = self.web_element.text
         return text
+
+    def wait_visible(self):
+        WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(locator=self.locator))
 

@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "files.autoSave": "afterDelay",
+    "python.pythonPath": "Scripts\\python.exe"
+}
